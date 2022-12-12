@@ -3,6 +3,7 @@
 * Description: main - prints out string on std.
 * Return: 0 if success.
 */
+int main(void)
 {
 printf("Size of a char: %lu byte(s)\n", sizeof(char));
 printf("Size of an int: %lu byte(s)\n", sizeof(int));
