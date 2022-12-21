@@ -1,31 +1,20 @@
 #include "main.h"
 
 /**
- * _strncat - concatenates n bytes from a string to another
- * @dest: destination string
- * @src: source string
- * @n: number of bytes of str to concatenate
- *
- * Return: a pointer to the resulting string dest
+ * reverse_array - reverses an array of integers
+ * @a: array to be reversed
+ * @n: number of elements in the array
  */
-char *_strncat(char *dest, char *src, int n)
+void reverse_array(int *a, int n)
 {
-	int i, j;
+	int i, j, tmp;
 
-	i = 0;
-	j = 0;
+	j = n - 1;
 
-	while (dest[i] != '\0')
-		i++;
-
-	while (src[j] != '\0' && j < n)
+	for (i = 0; i < n / 2; i++)
 	{
-		dest[i] = src[j];
-		i++;
-		j++;
+		tmp = a[i];
+		a[i] = a[j];
+		a[j--] = tmp;
 	}
-
-	dest[i] = '\0';
-
-	return (dest);
 }
